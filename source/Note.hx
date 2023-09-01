@@ -34,6 +34,8 @@ class Note extends FlxSprite
 
 	private var CharactersWith3D:Array<String> = ["dave-angey", "bambi-3d", 'bambi-unfair', 'exbungo', 'expunged', 'dave-festival-3d', 'dave-3d-recursed', 'bf-3d', 'nofriend'];
 
+        private var CharactersWith3e:Array<String> = ["weirdy-bandu"];
+	
 	public static var swagWidth:Float = 160 * 0.7;
 	public static var PURP_NOTE:Int = 0;
 	public static var GREEN_NOTE:Int = 2;
@@ -102,6 +104,14 @@ class Note extends FlxSprite
 		{
 			this.noteStyle = '3D';
 			notePathLol = 'notes/NOTE_assets_3D';
+		}
+		if ((((CharactersWith3e.contains(PlayState.SONG.player2) && !musthit) || ((CharactersWith3e.contains(PlayState.SONG.player1)
+				|| CharactersWith3e.contains(PlayState.characteroverride) || CharactersWith3e.contains(PlayState.formoverride)) && musthit))
+				|| ((CharactersWith3e.contains(PlayState.SONG.player2) || CharactersWith3e.contains(PlayState.SONG.player1)) && ((this.strumTime / 50) % 20 > 10)))
+				&& this.noteStyle == 'normal')
+		{
+			this.noteStyle = '3e';
+			notePathLol = 'notes/NOTE_assets_3e';
 		}
 		switch (noteStyle)
 		{
