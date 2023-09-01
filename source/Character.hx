@@ -76,6 +76,34 @@ class Character extends FlxSprite
 				nativelyPlayable = true;
 
 				flipX = true;
+			case 'weirdy-bandu':
+				frames = Paths.getSparrowAtlas('characters/gethimbandu', 'shared');
+				
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24, false);
+				animation.addByPrefix('singLEFT', 'left', 24, false);
+				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singDOWN', 'down', 24, false);
+				animation.addByPrefix('singUPmiss', 'idle', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'idle', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'idle', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'idle', 24, false);
+				animation.addByPrefix('hey', 'up', 24, false);
+
+				animation.addByPrefix('firstDeath', "idle", 24, false);
+				animation.addByPrefix('deathLoop', "down", 24, true);
+				animation.addByPrefix('deathConfirm', "up", 24, false);
+				animation.addByPrefix('dodge', "down", 24, false);
+				animation.addByPrefix('scared', 'right', 24);
+				animation.addByPrefix('hit', 'right', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				barColor = FlxColor.fromRGB(30, 235, 30);
+
+				playAnim('idle');
+
+				flipX = true;
 			case 'bf-3d':
 				frames = Paths.getSparrowAtlas('characters/3d_bf', 'shared');
 
