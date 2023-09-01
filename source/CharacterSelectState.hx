@@ -111,6 +111,9 @@ class CharacterSelectState extends MusicBeatState
 		]),
 		new CharacterInSelect('bambi-3d', [0, 3, 0, 0], [
 			new CharacterForm('bambi-3d', 'Expunged', [0, 3, 0, 0], '3D'),
+		]),
+		new CharacterInSelect('weirdy-bandu', [5, 3, 2, 1], [
+			new CharacterForm('weirdy-bandu', 'GET HIM', [5, 3, 2, 1], '3D'),
 		])
 	];
 	#if SHADERS_ENABLED
